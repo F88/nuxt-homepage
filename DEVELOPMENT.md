@@ -1,5 +1,10 @@
 # 開発
 
+以下に記載するFirebaseの機能を利用する場合の開発手順等について記載します。
+
+- [Firebase Hosting](https://firebase.google.com/docs/hosting)
+- [Cloud Firestore](https://firebase.google.com/docs/firestore)
+
 ## Firebaseの準備
 
 Firebaseは既に利用可能である前提とします。
