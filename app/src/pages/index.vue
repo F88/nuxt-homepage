@@ -15,6 +15,16 @@
         <NewsCard />
       </v-row>
     </v-container>
+
+    <v-container>
+      <v-row>
+        <p class="display-1 font-weight-black red--text">
+          RECENT NEWS (via Firestore)
+        </p>
+      </v-row>
+      <News />
+    </v-container>
+
     <v-container>
       <v-row>
         <p class="display-1 font-weight-black red--text">
@@ -29,7 +39,7 @@
           何をつくりたいかは、あなた次第。ワクワクする活動が待っています。ぜひ Code for Japan の仲間とともに最初の一歩を踏み出しましょう。<br><br>
           Happy Civic Hacking!
           <v-row>
-            <v-col cols=12 align="right">
+            <v-col cols="12" align="right">
               Code for Japan代表 関 治之
             </v-col>
           </v-row>
@@ -71,35 +81,47 @@
     </v-container>
     <v-container>
       <v-row>
-        <p class="display-1 font-weight-black red--text">FOR STUDENTS</p>
+        <p class="display-1 font-weight-black red--text">
+          FOR STUDENTS
+        </p>
       </v-row>
       <v-row class="blue-grey lighten-5 pa-5">
         <v-col cols="8">
           <!-- 画像はる -->
         </v-col>
-        <v-col cols="4">asdf</v-col>
+        <v-col cols="4">
+          asdf
+        </v-col>
       </v-row>
     </v-container>
     <v-container>
       <v-row>
-        <p class="display-1 font-weight-black red--text">FOR UNIVERSITY</p>
+        <p class="display-1 font-weight-black red--text">
+          FOR UNIVERSITY
+        </p>
       </v-row>
       <v-row class="blue-grey lighten-5 pa-5">
         <v-col cols="8">
           <!-- 画像はる -->
         </v-col>
-        <v-col cols="4">asdf</v-col>
+        <v-col cols="4">
+          asdf
+        </v-col>
       </v-row>
     </v-container>
     <v-container>
       <v-row>
-        <p class="display-1 font-weight-black red--text">FOR GOVERNMENT</p>
+        <p class="display-1 font-weight-black red--text">
+          FOR GOVERNMENT
+        </p>
       </v-row>
       <v-row class="blue-grey lighten-5 pa-5">
         <v-col cols="8">
           <!-- 画像はる -->
         </v-col>
-        <v-col cols="4">asdf</v-col>
+        <v-col cols="4">
+          asdf
+        </v-col>
       </v-row>
     </v-container>
     <v-row justify="center">
@@ -123,12 +145,14 @@
 <script>
 import Carousel from '@/components/Carousel.vue'
 import NewsCard from '@/components/NewsCard.vue'
+import News from '@/components/News.vue'
 
 export default {
   name: 'Home',
   components: {
     Carousel,
-    NewsCard
+    NewsCard,
+    News
   }
 }
 </script>

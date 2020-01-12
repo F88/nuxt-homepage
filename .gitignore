@@ -5,6 +5,8 @@
 # Firebase
 .firebaserc
 .firebase/
+firebase-debug.log
+firebase.config.js.local
 
 # IDE
 .vscode/

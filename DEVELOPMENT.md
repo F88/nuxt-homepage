@@ -71,7 +71,6 @@ You can run this command to print out your new app's Google Services config:
   firebase apps:sdkconfig WEB *:************:web:**********************
 ```
 
-<!--
 ## Cloud Firestore のセットアップ
 
 データベースとして Cloud Firestore を利用する為の対応です。
@@ -82,7 +81,6 @@ Security rules の選択は任意。
 後程上書きする為問題ありません。
 
 [appname – appname – Firebase console](https://console.firebase.google.com/project/target_project/database)
--->
 
 ## Firebase CLI の準備
 
@@ -101,44 +99,26 @@ app/package.json に記載されている依存パッケージをインストー
 [user@host app] $ npm install
 ```
 
-<!--
+### 開発
+
+`npm run dev` コマンドで起動される環境等を利用して開発を進めます。
+
+参考)
+
+- [コマンド \- NuxtJS](https://ja.nuxtjs.org/guide/commands/)
+
+
+## アプリケーションの(Firebaseへの)デプロイ
+
+アプリケーションをFirebaseにデプロイします。
+
 ### ファイルの生成(Nuxt.js)
 
 ```shell
 [user@host app] $ npm run generate
 ```
--->
 
-### Firebaseエミュレーターによる動作確認
-
-エミュレータでの動作確認も可能です。
-
-参考) [Set up the Firebase Emulators  \|  Firebase](https://firebase.google.com/docs/rules/emulator-setup)
-
-```shell
-[user@host app] $ firebase emulators:start
-```
-
-出力例
-
-```shell
-[user@host app] $ firebase emulators:start
-i  emulators: Starting emulators: firestore, hosting
-i  firestore: Serving ALL traffic (including WebChannel) on http://localhost:8080
-⚠  firestore: Support for WebChannel on a separate port (8081) is DEPRECATED and will go away soon. Please use port above instead.
-i  firestore: Emulator logging to firestore-debug.log
-✔  firestore: Emulator started at http://localhost:8080
-i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
-i  hosting: Serving hosting files from: app
-✔  hosting: Local server: http://localhost:5000
-✔  hosting: Emulator started at http://localhost:5000
-✔  All emulators started, it is now safe to connect.
-```
-
-### アプリケーションの(Firebaseへの)デプロイ
-
-アプリケーションをFirebaseにデプロイします。
-
+### Firebaseへのデプロイ
 
 ```shell
 [user@host app] $ firebase --project target_porject deploy
@@ -173,17 +153,11 @@ Project Console: https://console.firebase.google.com/project/target_project/over
 Hosting URL: https://target_project.firebaseapp.com
 ```
 
-## リリース手順
+## リリース手順 (開発用PJとは別のPJが存在する場合)
 
 開発時のみ必要なパッケージの除去、開発用Firebaseプロジェクトとは異なるプロジェクトへのデプロイなどが必要な場合は以下のように対応します。
 
 ### 関連パッケージのインストール(例:公開用)
-
-<!--
-```shell
-[user@host app] $ npm install --production
-```
--->
 
 ```shell
 [user@host app] $ npm install --production && npm prune --production
@@ -195,6 +169,9 @@ Hosting URL: https://target_project.firebaseapp.com
 [user@host app] $ firebase --project target_porject deploy
 ```
 
-# CI/CD
+## テスト
+
+## CI/CD
 
 CI(Continuous Integration), CD(Continuous Delivery)には未対応
+
